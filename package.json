@@ -1,0 +1,24 @@
+{
+  "name": "contact-management-app",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "dev" : "node --env-file-if-exists=.env --watch src/app.js\n",
+    "start" : "node --env-file-if-exists=.env src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hashir-Akbar/contact-management-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hashir-Akbar/contact-management-app/issues"
+  },
+  "homepage": "https://github.com/Hashir-Akbar/contact-management-app#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
