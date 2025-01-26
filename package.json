@@ -4,8 +4,8 @@
   "main": "src/app.js",
   "type": "module",
   "scripts": {
-    "dev" : "node --env-file-if-exists=.env --watch src/app.js\n",
-    "start" : "node --env-file-if-exists=.env src/app.js"
+    "dev": "node --env-file-if-exists=.env --watch src/app.js\n",
+    "start": "node --env-file-if-exists=.env src/app.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Hashir-Akbar/contact-management-app#readme",
   "description": "",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "express-async-handler": "^1.2.0"
   }
 }
