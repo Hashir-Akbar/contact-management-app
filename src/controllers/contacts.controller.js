@@ -1,10 +1,10 @@
 import asyncHandler  from "express-async-handler";
+import ContactModel  from "../Models/contacts.model.js";
 
 
-
-const getContacts = asyncHandler((req,res) =>  {
-
-         res.status(200).send("hi")
+const getContacts = asyncHandler(async (req,res) =>  {
+         const getContacts = await ContactModel.find({})
+         res.status(200).send(getContacts)
 })
 
 
