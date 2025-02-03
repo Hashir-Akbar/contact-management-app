@@ -1,5 +1,5 @@
 import asyncHandler  from "express-async-handler";
-import ContactModel  from "../Models/contacts.model.js";
+import {ContactModel}  from "../Models/contacts.model.js";
 
 
 const getContacts = asyncHandler(async (req,res) =>  {
@@ -9,9 +9,9 @@ const getContacts = asyncHandler(async (req,res) =>  {
 
 
 
-const createContacts = asyncHandler((req,res) =>  {
-
-    res.status(200).send("create hi")
+const createContacts = asyncHandler(async (req,res) =>  {
+      const createContact = await ContactModel.create(req.body);
+      res.status(201).send({createContact, success:true});
 })
 const updateContacts = asyncHandler((req,res) =>  {
 
