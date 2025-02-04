@@ -15,11 +15,23 @@ const createContacts = asyncHandler(async (req,res) =>  {
 })
 const updateContacts = asyncHandler((req,res) =>  {
 
-    res.status(200).send("update")
+    const {id} = req.params
+    const updateContact = await ContactModel.findByIdAndUpdate(id, req.body, {
+        new: true,
+        runValidators: true
+    })
+    res.status(200).send({
+        updateContact,
+        success:true
+    })
 })
-const deleteContacts = asyncHandler((req,res) =>  {
+const deleteContacts = asyncHandler(async (req,res) =>  {
 
-    res.status(200).send("delete")
+    const {id} = req.params
+    const deleteContact = await ContactModel.findByIdAndDelete(id)
+    res.status(200).send(
+        {deleteContact, success:true}
+    )
 })
 
 const contactsController =  {
