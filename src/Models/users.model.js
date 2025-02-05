@@ -23,3 +23,5 @@ const UsersModel = new mongoose.Schema({
     }
 
 }, {timestamps:true})
+
+export const Users = mongoose.model('Users',UsersModel)
