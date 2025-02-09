@@ -13,7 +13,7 @@ const createContacts = asyncHandler(async (req,res) =>  {
       const createContact = await ContactModel.create(req.body);
       res.status(201).send({createContact, success:true});
 })
-const updateContacts = asyncHandler((req,res) =>  {
+const updateContacts = asyncHandler(async (req,res) =>  {
 
     const {id} = req.params
     const updateContact = await ContactModel.findByIdAndUpdate(id, req.body, {

@@ -4,6 +4,7 @@ import notFound from "./Middlewares/notFound.js";
 import errorHandler from "./Middlewares/errorHandler.js";
 import contactRoutes from "./Routes/contacts.routes.js";
 import connectDb from "./db/connect.js";
+import userRoute from './routes/users.routes.js';
 
 
 const app = express();
@@ -19,6 +20,8 @@ app.get('/', (req, res) => {
 
 //routes
 app.use("/api/v1",contactRoutes )
+app.use("/api/v1", userRoute )
+
 
 app.use(errorHandler)
 app.use(notFound)
