@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Hashir-Akbar/contact-management-app#readme",
   "description": "",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^4.21.2",
     "express-async-handler": "^1.2.0",
     "mongoose": "^8.9.5"
